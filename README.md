@@ -1,0 +1,26 @@
+# BVote
+
+**Using blockchain to vote **
+
+---
+## Utilizacion del script autoBase.sh para inicializar las bases de datos
+
+### Instalar Mariadb + crer usuari 'alumne' + crear base de datos usuarios.
+```./autoBase.sh -i```
+
+### Importar base de datos de las elecciones (con el script *autoBase.sh*) o bien crearla.
+```./autoBase.sh -a <nombre elecciones> -R```
+
+---
+## Pasos a seguir para poner en marcha la web
+
+### Ejecutar *login.js*.
+```node login.js```
+
+Antes de seguir adelante con las votaciones, los votantes deberán descargar sus claves y posteriormente se pondrán en funcionamiento los nodos corriendo la *blockchain*. De esta manera, las claves públicas de los votantes se guardarán en la base de datos y cuando ejecutemos los cuatro nodos estos podrán acceder a las claves. Por lo tanto, **después de que los votantes hayan descargado sus claves hacemos**:
+
+### Ejecutar el script **initBlockchain.sh** para inicializar la blockckain y comunicar los 4 nodos entre ellos.
+```./initBlockchain.py <nombre elecciones> ```
+
+---
+Ahora sí, **los votantes podrán ejercer su voto a partir de aquí**.
