@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1">
+        <script src="//cdn.jsdelivr.net/npm/simple-crypto-js@2.5.0/dist/SimpleCrypto.min.js"></script>
+		<title>BVote - Chain</title>
+        <link href="/style.css" rel="stylesheet" type="text/css">
+		
+	</head>
+	<body>
+        <p class=”invisible” id="query"> <%=varToPass %></p>
+        <div class="login">
+            <h1>Transaccions de la blockchain:</h1>
+            <div id="buttonsContainer2"></div>
+            <button type="button" id="atrasButton">Endarrere</button>
+
+        </div>
+        
+        <script>
+            
+            var elementos = document.getElementById("query").innerHTML;
+            const obj = JSON.parse(elementos);
+            const buttonsContainer = document.getElementById("buttonsContainer2");
+
+            if (obj.length < 2){
+                let resultado=document.createElement("div")
+                resultado.innerHTML="La cadena està buida";
+                document.getElementById("buttonsContainer2").appendChild(resultado);
+            }
+
+            else{
+                bloques = obj.chain;
+                for (var bloque = 1;bloque < bloques.length; ++bloque){
+                    let resultado=document.createElement("div")
+                    resultado.innerHTML=bloque+" : Previous hash: "+bloques[bloque].previous_hash+ " Proof: "+ bloques[bloque].proof+ " Timestamp: "+ bloques[bloque].timestamp;
+                    document.getElementById("buttonsContainer2").appendChild(resultado);
+                    var transactions = bloques[bloque].transactions;
+                    for(var transaction= 0; transaction < transactions.length; ++transaction){
+                        let resultado2=document.createElement("div")
+                        resultado2.innerHTML="Transaction: "+ transaction +" Recipient: "+ transactions[transaction].recipient+ " Sender: "+ transactions[transaction].sender+ " Signature: "+ transactions[transaction].signature;
+                        document.getElementById("buttonsContainer2").appendChild(resultado2);
+                    }
+                }
+            }   
+
+
+
+
+            
+
+            var atras = document.getElementById("atrasButton");
+            atras.addEventListener("click",function(){
+                let newWind = window.open("/menu", "width=full,height=full"); 
+            })
+        </script>
+
+        
+
+    </body>
+</html>
