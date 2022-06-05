@@ -1,7 +1,8 @@
 # BVote
 
-**Using blockchain to vote**
-
+## **Using blockchain to vote**
+### Universitat Politecnica de Catalunya
+#### Francisco Carot, Jordi Pitarch, Aleix Quintana y Alejandro Rodulfo
 ---
 ## Utilización del script autoBase.sh para inicializar las bases de datos
 
