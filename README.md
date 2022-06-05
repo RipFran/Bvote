@@ -25,5 +25,5 @@ Antes de seguir adelante con las votaciones, los votantes deberán descargar sus
 
 ---
 Ahora sí, **los votantes podrán ejercer su voto a partir de aquí**.
-Por último, siempre que se quieren ver los resultados de las elcciones asi como tambien las cadenas de bloques, se tendra que minar el bloque
+Por último, siempre que se quieran ver los resultados de las elcciones, así como también las cadenas de bloques, se tendrá que minar el bloque
 ```curl http://localhost:<puerto>/mine ```
