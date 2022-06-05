@@ -1,9 +1,9 @@
 # BVote
 
-**Using blockchain to vote **
+**Using blockchain to vote**
 
 ---
-## Utilizacion del script autoBase.sh para inicializar las bases de datos
+## Utilización del script autoBase.sh para inicializar las bases de datos
 
 ### Instalar Mariadb + crer usuari 'alumne' + crear base de datos usuarios.
 ```./autoBase.sh -i```
@@ -24,3 +24,6 @@ Antes de seguir adelante con las votaciones, los votantes deberán descargar sus
 
 ---
 Ahora sí, **los votantes podrán ejercer su voto a partir de aquí**.
+
+### Por ultimo, siempre que se quieren ver los resultados de las elcciones asi como tambien las cadenas de bloques, se tendra que minar el bloque
+```curl http://localhost:<puerto>/mine ```
