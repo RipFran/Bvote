@@ -6,7 +6,7 @@
 ---
 ## Utilización del script autoBase.sh para inicializar las bases de datos
 
-### Instalar Mariadb + crer usuario 'alumne' + crear base de datos usuarios.
+### Instalar Mariadb + crer usuario admin de las BBDD + crear base de datos usuarios.
 ```./autoBase.sh -i```
 
 ### Importar base de datos de las elecciones.
