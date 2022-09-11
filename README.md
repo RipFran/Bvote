@@ -6,7 +6,7 @@
 ---
 ## Utilización del script autoBase.sh para inicializar las bases de datos
 
-### Instalar Mariadb + crer usuario admin de las BBDD + crear base de datos usuarios.
+### Instalar Mariadb + crear usuario admin de las BBDD + crear base de datos usuarios.
 ```./autoBase.sh -i```
 
 ### Importar base de datos de las elecciones.
@@ -25,5 +25,5 @@ Antes de seguir adelante con las votaciones, los votantes deberán descargar sus
 
 ---
 Ahora sí, **los votantes podrán ejercer su voto a partir de aquí**.
-Por último, siempre que se quieran ver los resultados de las elcciones, así como también las cadenas de bloques, se tendrá que minar el bloque
+Por último, siempre que se quieran ver los resultados de las elecciones, así como también las cadenas de bloques, se tendrá que minar el bloque
 ```curl http://localhost:<puerto>/mine ```
